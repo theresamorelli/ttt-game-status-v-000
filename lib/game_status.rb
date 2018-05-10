@@ -22,6 +22,8 @@ def won(board)
   # for each combination check if values at each position are equal
   # if so check if position_taken? for first one
   WIN_COMBINATIONS.detect do |combination|
-    board[combination[0]] == board[combination[1]] == board[combination[2]] && position_taken?(board, combination[0])
+    if board[combination[0]] == board[combination[1]] == board[combination[2]] && position_taken?(board, combination[0])
+      true
   end
 end
+
