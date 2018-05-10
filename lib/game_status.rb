@@ -26,4 +26,3 @@ def won(board)
       true
   end
 end
-
