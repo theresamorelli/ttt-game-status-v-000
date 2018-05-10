@@ -22,6 +22,5 @@ def won(board)
   WIN_COMBINATIONS.detect |combination|
     position_taken?(board, combination[0]) && position_taken(board, combination[1]) &&
     position_taken(board, combination[2])
-  end
 
 end
