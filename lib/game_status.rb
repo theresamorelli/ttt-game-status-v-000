@@ -19,8 +19,8 @@ def won(board)
   # compare the indices of combo at a time to the board - use position_taken helper method
   # if there's a match, check that values are equal (all X's or all O's)
 
+  # for each combination check if values at each position are equal
+  # if so check if position_taken? for first one
   WIN_COMBINATIONS.detect |combination|
-    position_taken?(board, combination[0]) && position_taken(board, combination[1]) &&
-    position_taken(board, combination[2])
-
+    board[combination[0]] == board[combination[1]] == board[combination[2]] && position_taken?(board, combination[0])
 end
